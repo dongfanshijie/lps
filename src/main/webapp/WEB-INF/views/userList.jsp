@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -31,16 +31,27 @@
 <!-- 调差 -->
 <div id="toolbar">
 <form class="form-inline">
+
   <div class="form-group">
     用户名：<input type="text" id="account" class="form-control" placeholder="输入用户名">
   出生时间：<input type="text" class="form-control date" name="goods.createTime" id="createTime" placeholder="输入时间">
   </div>
+
   <button onclick="searchUser()" type="button" class="btn btn-info glyphicon glyphicon-search" >搜索</button><br>
+
+  <shiro:hasPermission name="delete">
     <button onclick="delUser()" type="button" class="btn btn-warning glyphicon glyphicon-trash" >批量删除</button>
-  <button onclick="addUser()" type="button" class="btn btn-info glyphicon glyphicon-plus" >新增</button>
+    <button onclick="addUser()" type="button" class="btn btn-info glyphicon glyphicon-plus" >新增</button>
+  </shiro:hasPermission>
+
 
 </form>
 </div>
+<a href="${pageContext.request.contextPath }/logOut">点我注销</a>
+<shiro:hasPermission name="add"><li>增加</li></shiro:hasPermission>
+<shiro:hasPermission name="delete"><li>删除</li></shiro:hasPermission>
+<shiro:hasPermission name="update"><li>修改</li></shiro:hasPermission>
+<shiro:hasPermission name="query"><li>查询</li></shiro:hasPermission>
 <table class="table" id="myTable"></table>
 </body>
 <script type="text/javascript">

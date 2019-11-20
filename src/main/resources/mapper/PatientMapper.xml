@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oel.lps.mapper.PatientMapoper">
+
+
+
+  <!--查询患者信息-->
+  <select id="queryPatient" resultType="com.oel.lps.bean.Patient">
+select p.id,p.patientId,p.patientName,p.patientDate,p.patientAge,p.patientSex,
+p.idCardNo,p.sourceDepartment,p.sourceDoctor,p.creationTime
+ from l_patient p
+</select>
+
+  <!--调差-->
+  <select id="queryPatientName" parameterType="java.util.Map" resultType="com.oel.lps.bean.Patient">
+select p.id,p.patientId,p.patientName,p.patientDate,p.patientAge,p.patientSex,p.idCardNo,p.sourceDepartment,p.sourceDoctor,p.creationTime 
+from l_patient p WHERE 1=1
+    <!--调差编号-->
+<if test="patientId !=null and patientId !=''">
+  and patientId like '%${patientId}%'
+</if>
+    <!--调差名字-->
+    <if test="patientName !=null and patientName !=''">
+      and patientName like '%${patientName}%'
+    </if>
+    <!--调差身份证-->
+    <if test="idCardNo !=null and idCardNo !=''">
+      and idCardNo like '%${idCardNo}%'
+    </if>
+</select>
+</mapper>

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 
 @Controller
-@RequestMapping("test")
+//@RequestMapping("test")
 public class TestController {
 
 
