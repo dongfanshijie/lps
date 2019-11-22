@@ -181,7 +181,7 @@ function delUser(){
 //查询
 $('#myTable').bootstrapTable({
 	toolbar:'#toolbar',
-  url:"<%=request.getContextPath()%>/test/querTest",
+  url:"<%=request.getContextPath()%>/querTest",
 	pagination:true, //是否展示分页
 	pageList:[5, 10, 20, 50],//分页组件
 	pageNumber:1,

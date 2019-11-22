@@ -61,6 +61,7 @@ public class ChiefComplaintServiceImpl implements ChiefComplaintService {
         String time = format0.format(date.getTime());
         chiefComplaint.setFirsttime(time);
 
+        patientMapoper.addChiefComplaint(chiefComplaint);
 
 
     }

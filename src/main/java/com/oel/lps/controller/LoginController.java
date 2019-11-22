@@ -25,7 +25,6 @@ public class LoginController {
     }
 
     @RequestMapping("/loginUser")
-    @ResponseBody
     public String loginUser(String username,String password,HttpSession session) {
         //授权认证
         UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(username,password);
@@ -38,7 +37,7 @@ public class LoginController {
             //存入session
             session.setAttribute("user", user);
 
-            return "success";
+            return "userList";
         } catch(Exception e) {
             return "login";//返回登录页面
         }

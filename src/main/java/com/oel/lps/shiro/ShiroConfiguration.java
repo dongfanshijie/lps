@@ -37,13 +37,13 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put("/assert/assertQuery", "anon");//添加白名单
         filterChainDefinitionMap.put("/a", "anon");
 
-        filterChainDefinitionMap.put("/test/userlist", "anon");
-        filterChainDefinitionMap.put("/test/querTest", "anon");
+        filterChainDefinitionMap.put("/userlist", "anon");
+        filterChainDefinitionMap.put("/querTest", "anon");
         filterChainDefinitionMap.put("/queryPatient", "anon");
         filterChainDefinitionMap.put("/addPatient", "anon");
 
 
-
+        filterChainDefinitionMap.put("/js/**", "anon");
         filterChainDefinitionMap.put("/book/list", "anon");
         filterChainDefinitionMap.put("/logout*", "anon");
         filterChainDefinitionMap.put("/jsp/error.jsp*", "anon");
