@@ -31,10 +31,65 @@ public class Patient {
     private  String shortNamw ;//地区镇名字
     private  Integer shortCode ;//地区id
     private  String detailedAddress ;//详细地址
+    private  String source;
     private  String sourceDepartment ;//来源科室
     private  String sourceDoctor ;//来源医生
+    private  Integer estingItems;//筛查测评状态
+    private  Integer specialty;//专科测评状态
+    private  Integer whole;//整体测评
+    private  Integer treatmentProject;
     private  String process ;//疾病流程
     private  String creationTime ;//创建时间
+    private  Integer state;
+
+
+    public Integer getSpecialty() {
+        return specialty;
+    }
+
+    public void setSpecialty(Integer specialty) {
+        this.specialty = specialty;
+    }
+
+    public Integer getWhole() {
+        return whole;
+    }
+
+    public void setWhole(Integer whole) {
+        this.whole = whole;
+    }
+
+    public Integer getTreatmentProject() {
+        return treatmentProject;
+    }
+
+    public void setTreatmentProject(Integer treatmentProject) {
+        this.treatmentProject = treatmentProject;
+    }
+
+    public Integer getEstingItems() {
+        return estingItems;
+    }
+
+    public void setEstingItems(Integer estingItems) {
+        this.estingItems = estingItems;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
 
     public Integer getId() {
         return id;

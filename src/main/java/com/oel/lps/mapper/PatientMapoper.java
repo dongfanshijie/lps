@@ -2,10 +2,8 @@ package com.oel.lps.mapper;
 
 
 import com.oel.lps.bean.Patient;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
 
@@ -16,4 +14,12 @@ public interface PatientMapoper {
 
 
     List<Patient> queryPatientName(Map map);
+
+    int addPatient(Patient patient);
+
+    void addLScreeningChiefcomplaint(String patientId);
+
+    List queryIdCardNo(String idCardNo);
+
+    List<Patient> queryPatientById(String id);
 }

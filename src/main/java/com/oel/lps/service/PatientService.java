@@ -9,4 +9,8 @@ public interface PatientService {
 
 
     List<Patient> queryPatientName(Patient patient);
+
+    int addPatient(Patient patient);
+
+    List<Patient> queryPatientById(String id);
 }

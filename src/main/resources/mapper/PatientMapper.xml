@@ -28,4 +28,33 @@ from l_patient p WHERE 1=1
       and idCardNo like '%${idCardNo}%'
     </if>
 </select>
+
+    <!--验证身份证号码是否重复-->
+    <select id="queryIdCardNo" resultType="com.oel.lps.bean.Patient">
+        SELECT idCardNo from l_patient p WHERE p.idCardNo=#{IdCardNo}
+    </select>
+
+    <!--新增患者信息-->
+    <insert id="addPatient" parameterType="com.oel.lps.bean.Patient">
+        INSERT INTO l_patient(patientId,patientName,patientSex,idCardNo,patientDate,patientAge,nation,faith,education,phoneNumber,height,weight,
+        handHabit,maritaStatus,familyRanking,childrenNumber,childrenSituation,parentSituation,educationMode,shortNamw,shortCode,detailedAddress,
+        source,sourceDepartment,estingItems,specialty,whole,treatmentProject,sourceDoctor,process,creationTime,state)
+        VALUES
+        (#{patientId},#{patientName},#{patientSex},#{idCardNo},#{patientDate},#{patientAge},#{nation},#{faith},
+        #{education},#{phoneNumber},#{height},#{weight},#{handHabit},#{maritaStatus},#{familyRanking},#{childrenNumber},
+        #{childrenSituation},#{parentSituation},#{educationMode},#{shortNamw},#{shortCode},#{detailedAddress},#{source},
+        #{sourceDepartment},#{estingItems},#{specialty},#{whole},#{treatmentProject},#{sourceDoctor}, #{process},#{creationTime},#{state})
+    </insert>
+
+    <!--新增治疗项目
+    <insert id="addLScreeningChiefcomplaint" parameterType="com.oel.lps.bean.ChiefComplaint">
+        INSERT INTO l_screening_chiefcomplaint(patientID) VALUES(#{patientId})
+    </insert>-->
+
+
+    <!--根据id查询患者信息-->
+    <select id="queryPatientById" parameterType="String" resultType="com.oel.lps.bean.Patient">
+    SELECT  * from l_patient WHERE id=#{id}
+</select>
+
 </mapper>

@@ -38,8 +38,11 @@ public class ShiroConfiguration {
         filterChainDefinitionMap.put("/a", "anon");
 
         filterChainDefinitionMap.put("/test/userlist", "anon");
-       filterChainDefinitionMap.put("/test/querTest", "anon");
+        filterChainDefinitionMap.put("/test/querTest", "anon");
         filterChainDefinitionMap.put("/queryPatient", "anon");
+        filterChainDefinitionMap.put("/addPatient", "anon");
+
+
 
         filterChainDefinitionMap.put("/book/list", "anon");
         filterChainDefinitionMap.put("/logout*", "anon");

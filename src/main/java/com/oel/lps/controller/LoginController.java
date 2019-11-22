@@ -6,6 +6,7 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
 
@@ -24,6 +25,7 @@ public class LoginController {
     }
 
     @RequestMapping("/loginUser")
+    @ResponseBody
     public String loginUser(String username,String password,HttpSession session) {
         //授权认证
         UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(username,password);
@@ -35,7 +37,8 @@ public class LoginController {
             User user=(User) subject.getPrincipal();
             //存入session
             session.setAttribute("user", user);
-            return "userList";
+
+            return "success";
         } catch(Exception e) {
             return "login";//返回登录页面
         }

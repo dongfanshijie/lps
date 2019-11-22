@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oel.lps.mapper.LScreeningChiefcomplaintDAO">
+  <resultMap id="BaseResultMap" type="com.oel.lps.bean.ChiefComplaint">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="symptom" jdbcType="VARCHAR" property="symptom" />
+    <result column="frequency" jdbcType="VARCHAR" property="frequency" />
+    <result column="firstTime" jdbcType="TIMESTAMP" property="firsttime" />
+    <result column="lastTime" jdbcType="TIMESTAMP" property="lasttime" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="concomitantSymptom" jdbcType="VARCHAR" property="concomitantsymptom" />
+    <result column="motorSymptoms" jdbcType="VARCHAR" property="motorsymptoms" />
+    <result column="sleepSymptoms" jdbcType="VARCHAR" property="sleepsymptoms" />
+    <result column="visitingExperience" jdbcType="VARCHAR" property="visitingexperience" />
+    <result column="pastMedicalHistory" jdbcType="VARCHAR" property="pastmedicalhistory" />
+    <result column="familyHistory" jdbcType="VARCHAR" property="familyhistory" />
+    <result column="stressor" jdbcType="VARCHAR" property="stressor" />
+    <result column="patientID" jdbcType="VARCHAR" property="patientid" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, symptom, frequency, firstTime, lastTime, `degree`, concomitantSymptom, motorSymptoms, 
+    sleepSymptoms, visitingExperience, pastMedicalHistory, familyHistory, stressor, patientID
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from l_screening_chiefcomplaint
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from l_screening_chiefcomplaint
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.oel.lps.bean.ChiefComplaint">
+    insert into l_screening_chiefcomplaint (id, symptom, frequency, 
+      firstTime, lastTime, `degree`, 
+      concomitantSymptom, motorSymptoms, sleepSymptoms, 
+      visitingExperience, pastMedicalHistory, 
+      familyHistory, stressor, patientID
+      )
+    values (#{id,jdbcType=INTEGER}, #{symptom,jdbcType=VARCHAR}, #{frequency,jdbcType=VARCHAR}, 
+      #{firsttime,jdbcType=TIMESTAMP}, #{lasttime,jdbcType=TIMESTAMP}, #{degree,jdbcType=VARCHAR}, 
+      #{concomitantsymptom,jdbcType=VARCHAR}, #{motorsymptoms,jdbcType=VARCHAR}, #{sleepsymptoms,jdbcType=VARCHAR}, 
+      #{visitingexperience,jdbcType=VARCHAR}, #{pastmedicalhistory,jdbcType=VARCHAR}, 
+      #{familyhistory,jdbcType=VARCHAR}, #{stressor,jdbcType=VARCHAR}, #{patientid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.oel.lps.bean.ChiefComplaint">
+    insert into l_screening_chiefcomplaint
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="symptom != null">
+        symptom,
+      </if>
+      <if test="frequency != null">
+        frequency,
+      </if>
+      <if test="firsttime != null">
+        firstTime,
+      </if>
+      <if test="lasttime != null">
+        lastTime,
+      </if>
+      <if test="degree != null">
+        `degree`,
+      </if>
+      <if test="concomitantsymptom != null">
+        concomitantSymptom,
+      </if>
+      <if test="motorsymptoms != null">
+        motorSymptoms,
+      </if>
+      <if test="sleepsymptoms != null">
+        sleepSymptoms,
+      </if>
+      <if test="visitingexperience != null">
+        visitingExperience,
+      </if>
+      <if test="pastmedicalhistory != null">
+        pastMedicalHistory,
+      </if>
+      <if test="familyhistory != null">
+        familyHistory,
+      </if>
+      <if test="stressor != null">
+        stressor,
+      </if>
+      <if test="patientid != null">
+        patientID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="symptom != null">
+        #{symptom,jdbcType=VARCHAR},
+      </if>
+      <if test="frequency != null">
+        #{frequency,jdbcType=VARCHAR},
+      </if>
+      <if test="firsttime != null">
+        #{firsttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasttime != null">
+        #{lasttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="degree != null">
+        #{degree,jdbcType=VARCHAR},
+      </if>
+      <if test="concomitantsymptom != null">
+        #{concomitantsymptom,jdbcType=VARCHAR},
+      </if>
+      <if test="motorsymptoms != null">
+        #{motorsymptoms,jdbcType=VARCHAR},
+      </if>
+      <if test="sleepsymptoms != null">
+        #{sleepsymptoms,jdbcType=VARCHAR},
+      </if>
+      <if test="visitingexperience != null">
+        #{visitingexperience,jdbcType=VARCHAR},
+      </if>
+      <if test="pastmedicalhistory != null">
+        #{pastmedicalhistory,jdbcType=VARCHAR},
+      </if>
+      <if test="familyhistory != null">
+        #{familyhistory,jdbcType=VARCHAR},
+      </if>
+      <if test="stressor != null">
+        #{stressor,jdbcType=VARCHAR},
+      </if>
+      <if test="patientid != null">
+        #{patientid,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.oel.lps.bean.ChiefComplaint">
+    update l_screening_chiefcomplaint
+    <set>
+      <if test="symptom != null">
+        symptom = #{symptom,jdbcType=VARCHAR},
+      </if>
+      <if test="frequency != null">
+        frequency = #{frequency,jdbcType=VARCHAR},
+      </if>
+      <if test="firsttime != null">
+        firstTime = #{firsttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="lasttime != null">
+        lastTime = #{lasttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="degree != null">
+        `degree` = #{degree,jdbcType=VARCHAR},
+      </if>
+      <if test="concomitantsymptom != null">
+        concomitantSymptom = #{concomitantsymptom,jdbcType=VARCHAR},
+      </if>
+      <if test="motorsymptoms != null">
+        motorSymptoms = #{motorsymptoms,jdbcType=VARCHAR},
+      </if>
+      <if test="sleepsymptoms != null">
+        sleepSymptoms = #{sleepsymptoms,jdbcType=VARCHAR},
+      </if>
+      <if test="visitingexperience != null">
+        visitingExperience = #{visitingexperience,jdbcType=VARCHAR},
+      </if>
+      <if test="pastmedicalhistory != null">
+        pastMedicalHistory = #{pastmedicalhistory,jdbcType=VARCHAR},
+      </if>
+      <if test="familyhistory != null">
+        familyHistory = #{familyhistory,jdbcType=VARCHAR},
+      </if>
+      <if test="stressor != null">
+        stressor = #{stressor,jdbcType=VARCHAR},
+      </if>
+      <if test="patientid != null">
+        patientID = #{patientid,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.oel.lps.bean.ChiefComplaint">
+    update l_screening_chiefcomplaint
+    set symptom = #{symptom,jdbcType=VARCHAR},
+      frequency = #{frequency,jdbcType=VARCHAR},
+      firstTime = #{firsttime,jdbcType=TIMESTAMP},
+      lastTime = #{lasttime,jdbcType=TIMESTAMP},
+      `degree` = #{degree,jdbcType=VARCHAR},
+      concomitantSymptom = #{concomitantsymptom,jdbcType=VARCHAR},
+      motorSymptoms = #{motorsymptoms,jdbcType=VARCHAR},
+      sleepSymptoms = #{sleepsymptoms,jdbcType=VARCHAR},
+      visitingExperience = #{visitingexperience,jdbcType=VARCHAR},
+      pastMedicalHistory = #{pastmedicalhistory,jdbcType=VARCHAR},
+      familyHistory = #{familyhistory,jdbcType=VARCHAR},
+      stressor = #{stressor,jdbcType=VARCHAR},
+      patientID = #{patientid,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
