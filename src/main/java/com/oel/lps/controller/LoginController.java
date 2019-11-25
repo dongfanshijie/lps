@@ -25,6 +25,7 @@ public class LoginController {
     }
 
     @RequestMapping("/loginUser")
+    @ResponseBody
     public String loginUser(String username,String password,HttpSession session) {
         //授权认证
         UsernamePasswordToken usernamePasswordToken=new UsernamePasswordToken(username,password);
