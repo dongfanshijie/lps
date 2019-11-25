@@ -13,20 +13,29 @@
 <div class="login">
     <div class="login_body">
         <div class="info">
+            <div class="logo">
+                <img src="/images/logo.png" alt="">
+            </div>
             <div class="uname">
-                <div>账号</div>
-                <input type="text">
+                <div class="uname_top"></div>
+                <div class="uname_btm"></div>
+                <div class="line">
+                    <img src="/images/line.png" alt="">
+                </div>
+                <input type="text" placeholder="请输入登录账号">
             </div>
             <div class="upwd">
-                <div>密码</div>
-                <input type="password">
+                <div class="upwd_top"></div>
+                <div class="upwd_btm"></div>
+                <input type="password" placeholder="请输入密码">
+                <div class="line">
+                    <img src="/images/line.png" alt="">
+                </div>
             </div>
-            <div class="remember">
-                <input type="checkbox">
-                <div>记住密码</div>
-            </div>
-            <div>
-                <button class="btn">登录</button>
+            <div class="btn">
+                <button>登录</button>
+                <div class="btn_top"></div>
+                <div class="btn_btm"></div>
             </div>
         </div>
     </div>
