@@ -5,7 +5,7 @@ $(".btn button").click(
 )
  $(document).keydown(function(){
     if (event.keyCode == 13) {
-        mylogon()
+        mylogin()
     }
 })
 /* $(function(){
@@ -15,7 +15,7 @@ $(".btn button").click(
         $(".remember input").attr("checked",true)
     }
 })*/
-function mylogon(){
+function mylogin(){
     var uname=$(".uname input")
     var upwd=$(".upwd input")
     var mylogin={
