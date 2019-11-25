@@ -15,11 +15,7 @@
     background-image: url("/images/background_img.png");
     background-repeat: no-repeat;
     padding-top: 100px;
-}
-.login_body:after{
-    clear: both;
-    height: 0;
-    display: block;
+    box-sizing: border-box;
 }
 .info{
     width: 735px;
