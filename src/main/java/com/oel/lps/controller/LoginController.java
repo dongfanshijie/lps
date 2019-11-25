@@ -24,6 +24,11 @@ public class LoginController {
         return "a";
     }
 
+    @RequestMapping("/index")
+    public String index() {
+        return "index";
+    }
+
     @RequestMapping("/loginUser")
     @ResponseBody
     public String loginUser(String username,String password,HttpSession session) {
