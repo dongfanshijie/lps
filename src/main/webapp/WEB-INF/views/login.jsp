@@ -42,47 +42,6 @@
 </div>
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/jquery.cookie.js"></script>
-<script>
-    $(".btn").click(
-        function(){
-            var uname=$(".uname input")
-            var upwd=$(".upwd input")
-            var remember=$(".remember input")
-            var mylogin={
-                username:uname.val(),
-                password:upwd.val()
-            }
-            if(uname.val()==""){
-                alert("账号为空")
-            }else if(upwd.val()==""){
-                alert("密码为空")
-            }else{
-                $.ajax({
-                    url:"/loginUser",
-                    type:"post",
-                    data:mylogin,
-                    success:function(data){
-                        console.log(data)
-                    if(data!="userList"){
-                        alert("账号错误")
-                    }
-                    }
-                })
-            }
-            if(remember.is(":checked")){
-                $.cookie("user",uname.val(),{expires:7})
-            }else{
-                $.cookie("user","",{expires:-1})
-            }
-        }
-    )
-    $(function(){
-        var mycookie=$.cookie("user")
-        $(".uname input").val(mycookie)
-        if($(".uname input").val()!=""){
-            $(".remember input").attr("checked",true)
-        }
-    })
-</script>
+<script src="../../js/login.js"></script>
 </body>
 </html>
