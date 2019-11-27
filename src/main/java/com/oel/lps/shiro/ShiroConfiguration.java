@@ -20,41 +20,42 @@ import java.util.LinkedHashMap;
  */
 @Configuration
 public class ShiroConfiguration {
-    @Bean(name = "shiroFilter")
-    public ShiroFilterFactoryBean shiroFilter(@Qualifier("securityManager") SecurityManager manager) {
-        ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
-        bean.setSecurityManager(manager);
-        //配置登录的url和登录成功的url
-        bean.setLoginUrl("/login");
-        bean.setSuccessUrl("/home");
-        //配置访问权限
-        LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
-        filterChainDefinitionMap.put("/login*", "anon"); //表示可以匿名访问
-        filterChainDefinitionMap.put("/loginUser", "anon");
-        filterChainDefinitionMap.put("/client/test", "anon");
-        filterChainDefinitionMap.put("/assert/test", "anon");//添加白名单
-        filterChainDefinitionMap.put("/assert/get", "anon");//添加白名单
-        filterChainDefinitionMap.put("/assert/assertQuery", "anon");//添加白名单
-        filterChainDefinitionMap.put("/a", "anon");
-
-        filterChainDefinitionMap.put("/userlist", "anon");
-        filterChainDefinitionMap.put("/querTest", "anon");
-        filterChainDefinitionMap.put("/queryPatient", "anon");
-        filterChainDefinitionMap.put("/addPatient", "anon");
-
-        filterChainDefinitionMap.put("/images/**", "anon");
-        filterChainDefinitionMap.put("/css/**", "anon");
-        filterChainDefinitionMap.put("/js/**", "anon");
-        filterChainDefinitionMap.put("/book/list", "anon");
-        filterChainDefinitionMap.put("/logout*", "anon");
-        filterChainDefinitionMap.put("/jsp/error.jsp*", "anon");
-        filterChainDefinitionMap.put("/jsp/login.jsp*", "authc");
-        filterChainDefinitionMap.put("/*", "authc");//表示需要认证才可以访问
-        filterChainDefinitionMap.put("/**", "authc");//表示需要认证才可以访问
-        filterChainDefinitionMap.put("/*.*", "authc");
-        bean.setFilterChainDefinitionMap(filterChainDefinitionMap);
-        return bean;
-    }
+//    @Bean(name = "shiroFilter")
+//    public ShiroFilterFactoryBean shiroFilter(@Qualifier("securityManager") SecurityManager manager) {
+//        ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
+//        bean.setSecurityManager(manager);
+//        //配置登录的url和登录成功的url
+//        bean.setLoginUrl("/login");
+//        bean.setSuccessUrl("/home");
+//        //配置访问权限
+//        LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+//        filterChainDefinitionMap.put("/login*", "anon"); //表示可以匿名访问
+//        filterChainDefinitionMap.put("/loginUser", "anon");
+//        filterChainDefinitionMap.put("/client/test", "anon");
+//        filterChainDefinitionMap.put("/assert/test", "anon");//添加白名单
+//        filterChainDefinitionMap.put("/assert/get", "anon");//添加白名单
+//        filterChainDefinitionMap.put("/assert/assertQuery", "anon");//添加白名单
+//        filterChainDefinitionMap.put("/a", "anon");
+//
+//        filterChainDefinitionMap.put("/userlist", "anon");
+//        filterChainDefinitionMap.put("/querTest", "anon");
+//        filterChainDefinitionMap.put("/queryPatient", "anon");
+//        filterChainDefinitionMap.put("/addPatient", "anon");
+//
+//
+//        filterChainDefinitionMap.put("/images/**", "anon");
+//        filterChainDefinitionMap.put("/css/**", "anon");
+//        filterChainDefinitionMap.put("/js/**", "anon");
+//        filterChainDefinitionMap.put("/book/list", "anon");
+//        filterChainDefinitionMap.put("/logout*", "anon");
+//        filterChainDefinitionMap.put("/jsp/error.jsp*", "anon");
+//        filterChainDefinitionMap.put("/jsp/login.jsp*", "authc");
+//        filterChainDefinitionMap.put("/*", "authc");//表示需要认证才可以访问
+//        filterChainDefinitionMap.put("/**", "authc");//表示需要认证才可以访问
+//        filterChainDefinitionMap.put("/*.*", "authc");
+//        bean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+//        return bean;
+//    }
 
     //配置核心安全事务管理器
     @Bean(name = "securityManager")
