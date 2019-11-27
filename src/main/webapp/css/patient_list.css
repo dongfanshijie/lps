@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.patient{
+    width: 1920px;
+}
+.patient_list{
+    width: 270px;
+    height: 1080px;
+    background-color: #3C3B40FF;
+    display: inline-block;
+}
+.logo{
+    width: 270px;
+    height: 170px;
+    text-align: center;
+}
+.logo img{
+    width: 146px;
+    height: 95px;
+    margin-top: 38px;
+}
+.patient_guan,.patient_can,.patient_liao,.patient_shen,.patient_xin,.patient_user,.patient_xi{
+    width: 270px;
+    height: 78px;
+    font-size: 18px;
+    color: #BABABAFF;
+    padding-top: 27px;
+    padding-left: 72px;
+    box-sizing: border-box;
+}
+.patient_guan>div,.patient_guan>img,.patient_xi>div,.patient_xi>img,.patient_user>div,.patient_user>img,.patient_can>div,.patient_can>img
+,.patient_shen>div,.patient_shen>img,.patient_liao>div,.patient_liao>img,.patient_xin>div,.patient_xin>img{
+    float: left;
+}
+.patient_guan>div,.patient_can>div,.patient_liao>div,.patient_shen>div,.patient_xin>div,.patient_user>div,.patient_xi>div{
+    width: 75px;
+    margin-left: 6px;
+}
+.patient_xi{
+    margin-top: 363px;
+    background: #242119FF;
+    color: #FFF;
+}
+.patient_act{
+    text-align: end;
+    display: none;
+}
+.active{
+    background-color: #242119FF;
+    color: #1197D6FF;
+}
+.right{
+    height: 1080px;
+    background-image: url("/images/patient_bg.png");
+    display: inline-block;
+}
+.right_head{
+    width: 1634px;
+    height: 100px;
+    background-color: #FFFFFF;
+}
