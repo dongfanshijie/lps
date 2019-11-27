@@ -6,7 +6,7 @@ function myactive(e){
     }else if(e==6){
         $(".patient_nav").children(":last").addClass("active").siblings().removeClass("active")
     }else{
-        $(".patient_nav").children(`:nth-child(${e+1})`).addClass("active").siblings().removeClass("active")
+        $(".patient_nav").children(':nth-child(e+1)').addClass("active").siblings().removeClass("active")
     }
     $(".patient_nav .patient_act").eq(e).css("display","block").parents().siblings().children(".patient_act").css("display","none")
 if(e==0){
