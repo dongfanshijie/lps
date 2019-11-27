@@ -20,51 +20,30 @@
                 <div class="patient_guan active" onclick="myactive(0)">
                     <img src="/images/patient_img0_blue.png" alt="" class="patient_nav_img0">
                     <div>患者管理</div>
-                    <div class="patient_act" style="display: block;">
-                        <img src="/images/patient_duo.png" alt="">
-                    </div>
                 </div>
                 <div class="patient_xin" onclick="myactive(1)">
                     <img src="/images/patient_img1.png" alt=""class="patient_nav_img1">
                     <div>心身检查</div>
-                    <div class="patient_act">
-                        <img src="/images/patient_duo.png" alt="">
-                    </div>
                 </div>
                 <div class="patient_shen" onclick="myactive(2)">
                     <img src="/images/patient_img2.png" alt=""class="patient_nav_img2">
                     <div>心身报告</div>
-                    <div class="patient_act">
-                        <img src="/images/patient_duo.png" alt="">
-                    </div>
                 </div>
                 <div class="patient_liao" onclick="myactive(3)">
                     <img src="/images/patient_img3.png" alt="" class="patient_nav_img3">
                     <div>心身治疗</div>
-                    <div class="patient_act">
-                        <img src="/images/patient_duo.png" alt="">
-                    </div>
                 </div>
                 <div class="patient_can" onclick="myactive(4)">
                     <img src="/images/patient_img4.png" alt=""class="patient_nav_img4">
                     <div>参数配置</div>
-                    <div class="patient_act">
-                        <img src="/images/patient_duo.png" alt="">
-                    </div>
                 </div>
                 <div class="patient_user" onclick="myactive(5)">
                     <img src="/images/patient_img5.png" alt="" class="patient_nav_img5">
                     <div>角色权限</div>
-                    <div class="patient_act">
-                        <img src="/images/patient_duo.png" alt="">
-                    </div>
                 </div>
                 <div class="patient_xi" onclick="myactive(6)">
                     <img src="/images/patient_img6.png" alt="" class="patient_nav_img6">
                     <div>系统设置</div>
-                    <div class="patient_act">
-                        <img src="/images/patient_duo.png" alt="">
-                    </div>
                 </div>
             </div>
         </div>
