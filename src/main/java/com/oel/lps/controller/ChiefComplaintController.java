@@ -1,6 +1,7 @@
 package com.oel.lps.controller;
 
 import com.oel.lps.bean.ChiefComplaint;
+import com.oel.lps.bean.PatientExperience;
 import com.oel.lps.service.ChiefComplaintService;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,4 +44,24 @@ public class ChiefComplaintController {
 
         return 0;
     }
+
+
+
+    /*
+     * @Author ws
+     * @Description //TODO
+     * @Date  2019/11/29
+     * @Param [patientExperience, patientID]
+    * @return int
+    * 添加就诊经历
+    **/
+    @RequestMapping("addExperience")
+    @ResponseBody
+    public int addExperience (PatientExperience patientExperience, String patientID){
+        if (StringUtils.isNoneBlank(patientID)){
+            chiefComplaintService.addExperience(patientExperience,patientID);
+        }
+        return 0;
+    }
+
 }

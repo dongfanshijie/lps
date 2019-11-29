@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oel.lps.mapper.LDcprMiddleDAO">
+  <resultMap id="BaseResultMap" type="com.oel.lps.bean.DcprMiddle">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="patientID" jdbcType="VARCHAR" property="patientid" />
+    <result column="dcprID" jdbcType="INTEGER" property="dcprid" />
+    <result column="Answer" jdbcType="VARCHAR" property="answer" />
+    <result column="creationTime" jdbcType="TIMESTAMP" property="creationtime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, patientID, dcprID, Answer, creationTime
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from l_dcpr_middle
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from l_dcpr_middle
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.oel.lps.bean.DcprMiddle">
+    insert into l_dcpr_middle (id, patientID, dcprID, 
+      Answer, creationTime)
+    values (#{id,jdbcType=INTEGER}, #{patientid,jdbcType=VARCHAR}, #{dcprid,jdbcType=INTEGER}, 
+      #{answer,jdbcType=VARCHAR}, #{creationtime,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.oel.lps.bean.DcprMiddle">
+    insert into l_dcpr_middle
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="patientid != null">
+        patientID,
+      </if>
+      <if test="dcprid != null">
+        dcprID,
+      </if>
+      <if test="answer != null">
+        Answer,
+      </if>
+      <if test="creationtime != null">
+        creationTime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="patientid != null">
+        #{patientid,jdbcType=VARCHAR},
+      </if>
+      <if test="dcprid != null">
+        #{dcprid,jdbcType=INTEGER},
+      </if>
+      <if test="answer != null">
+        #{answer,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null">
+        #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.oel.lps.bean.DcprMiddle">
+    update l_dcpr_middle
+    <set>
+      <if test="patientid != null">
+        patientID = #{patientid,jdbcType=VARCHAR},
+      </if>
+      <if test="dcprid != null">
+        dcprID = #{dcprid,jdbcType=INTEGER},
+      </if>
+      <if test="answer != null">
+        Answer = #{answer,jdbcType=VARCHAR},
+      </if>
+      <if test="creationtime != null">
+        creationTime = #{creationtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.oel.lps.bean.DcprMiddle">
+    update l_dcpr_middle
+    set patientID = #{patientid,jdbcType=VARCHAR},
+      dcprID = #{dcprid,jdbcType=INTEGER},
+      Answer = #{answer,jdbcType=VARCHAR},
+      creationTime = #{creationtime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

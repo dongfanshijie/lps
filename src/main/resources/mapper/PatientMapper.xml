@@ -50,11 +50,11 @@ from l_patient p WHERE 1=1
     <insert id="addLScreeningChiefcomplaint" parameterType="com.oel.lps.bean.ChiefComplaint">
         INSERT INTO l_screening_chiefcomplaint(patientID) VALUES(#{patientId})
     </insert>-->
+    <!--根据id回显用户信息-->
+    <select id="queryPatientById" resultType="com.oel.lps.bean.Patient">
+        SELECT * from l_patient p WHERE p.id=#{id}
+    </select>
 
 
-    <!--根据id查询患者信息-->
-    <select id="queryPatientById" parameterType="String" resultType="com.oel.lps.bean.Patient">
-    SELECT  * from l_patient WHERE id=#{id}
-</select>
 
 </mapper>
