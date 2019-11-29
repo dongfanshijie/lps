@@ -2,12 +2,15 @@
     margin: 0;
     padding: 0;
 }
+.patient_right_tiao1{
+    display: none;
+}
 .patient{
-    width: 1920px;
+    width: 1900px;
 }
 .patient_list{
     width: 270px;
-    height: 1080px;
+    height: 930px;
     background-color: #3C3B40FF;
     display: inline-block;
 }
@@ -39,7 +42,7 @@
     margin-left: 6px;
 }
 .patient_xi{
-    margin-top: 363px;
+    margin-top: 180px;
     background: #242119FF;
     color: #FFF;
 }
@@ -48,12 +51,204 @@
     color: #1197D6FF;
 }
 .right{
-    height: 1080px;
+    height: 930px;
     background-image: url("/images/patient_bg.png");
     display: inline-block;
+    padding-left: 10px;
+    float: right;
 }
 .right_head{
-    width: 1634px;
+    width: 1600px;
     height: 100px;
     background-color: #FFFFFF;
+    box-sizing: border-box;
+    padding: 35px 30px 0;
+}
+.right_shou{
+    float: left;
+}
+.right_info{
+    float: right;
+}
+.right_remind,.right_serch,.right_sculpture,.right_id{
+    display: inline-block;
+    vertical-align: middle;
+}
+.right_sculpture img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.right_remind{
+    padding-right: 24px;
+}
+.right_serch{
+    padding-right: 35px;
+}
+.right_id{
+    padding-left: 16px;
+}
+.right_body{
+    padding-top: 45px;
+}
+.right_active{
+    border-bottom: 3px solid #1197D6;
+}
+.right_body_wode,.right_body_huanzhe{
+    width:136px;
+    height:70px;
+    font-size:20px;
+    border-radius:8px 8px 0px 0px;
+    background-color: #FFF;
+    display: inline-block;
+    line-height: 70px;
+    text-align: center;
+}
+.right_body_wode{
+    margin-right: 5px;
+}
+.right_body_list{
+    padding-top: 30px;
+    margin-left: 20px;
+}
+.patient_id,.patient_name,.patient_num,.patient_date{
+    width: 175px;
+    height: 50px;
+    font-size: 18px;
+    float: left;
+    color: #BBBBBB;
+    background:rgba(255,255,255,1);
+    border:1px solid rgba(187,187,187,1);
+    border-radius:4px;;
+    margin-right: 15px;
+    text-indent: 15px;
+}
+.patient_chaxun,.patient_dengji{
+    width:125px;
+    height:50px;
+    background:rgba(166,206,57,1);
+    box-shadow:0px 3px 9px 0px rgba(132,155,71,0.27);
+    border-radius:25px;
+    margin-left: 20px;
+    outline: none;
+}
+.patient_table{
+    width: 1600px;
+    clear: both;
+    margin-top: 15px;
+    line-height: 60px;
+    margin-left: 20px;
+}
+ul>li{
+    list-style: none;
+    float: left;
+}
+.patient_state{
+    margin-right: 70px;
+}
+.patient_state>li:first-child{
+    padding-right: 15px;
+}
+.patient_content>li:first-child{
+    padding-left: 35px;
+    padding-right: 15px;
+}
+.patient_test>ul>li:not(:first-child){
+    padding-right: 35px;
+}
+.patient_test>ul>li>img,.patient_test>ul>li>span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.patient_tables{
+    width: 1600px;
+    text-align: center;
+    background-color: #F2F0F0;
+    color: #333333;
+}
+.patient_tables_title{
+    clear: both;
+
+}
+.patient_tables_title{
+    height: 60px;
+    background:rgba(17,151,214,0.2);
+}
+.patient_tables_title>li{
+    font-size: 18px;
+    color: #000;
+}
+.patient_tables>ul>li:first-child{
+    width: 85px;
+    border-bottom: 1px solid rgba(242,240,240,1);
+    border-left: 1px solid  rgba(242,240,240,1);
+    border-right: 1px solid  rgba(242,240,240,1);
+}
+.patient_tables>ul>li:nth-child(2){
+    width: 150px;
+    border-right: 1px solid  rgba(242,240,240,1);
+    border-bottom: 1px solid rgba(242,240,240,1);
+}
+.patient_tables>ul>li:nth-child(3),.patient_tables>ul>li:nth-child(4),.patient_tables>ul>li:nth-child(7),.patient_tables>ul>li:nth-child(8){
+    width: 135px;
+    border-right: 1px solid  rgba(242,240,240,1);
+    border-bottom: 1px solid rgba(242,240,240,1);
+}
+.patient_tables>ul>li:nth-child(5),.patient_tables>ul>li:nth-child(6){
+    width: 65px;
+    border-right: 1px solid  rgba(242,240,240,1);
+    border-bottom: 1px solid rgba(242,240,240,1);
+}
+.patient_tables>ul>li:last-child{
+    width: 685px;
+    border-right: 1px solid  rgba(242,240,240,1);
+    border-bottom: 1px solid rgba(242,240,240,1);
+}
+.patient_renwu{
+    margin: 0 auto;
+    width: 252px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.patient_renwu>span{
+    width:126px;
+    height:43px;
+    font-size: 16px;
+    line-height: 43px;
+}
+.patient_renwu>span:first-child{
+    float: left;
+    border-radius: 22px 0px 0px 22px;
+}
+.patient_renwu>span:last-child{
+    float: right;
+    border-radius:0px 22px 22px 0px;
+}
+.patient_renwu_none{
+    background:rgba(214,214,214,1);
+    opacity:0.58;
+    color: #717171;
+}
+.patient_renwu_active{
+    background:rgba(17,151,214,1);
+    color: #FFF;
+}
+.patient_dispatch{
+    width: 685px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.patient_dispatch>span{
+    border-radius:17px;
+    width:88px;
+    height:33px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 33px;
+    background:#E6E6E6;
+    color: #8C8C8C
+}
+.patient_dispatch>.patient_dispatch_active{
+    background-color: #69BCE3;
+    color: #FFF;
 }

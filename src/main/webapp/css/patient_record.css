@@ -1,0 +1,76 @@
+.patient_record{
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.patient_record_select div{
+    display: inline-block;
+}
+#zhuangtai_select,#neirong_select{
+    width:176px;
+    height:50px;
+    font-size: 18px;
+    padding-left: 14px;
+    border: 1px solid #BBBBBB;
+    border-radius:6px;
+}
+.patient_left_select{
+    margin-right: 50px;
+}
+.patient_right_select>div,.patient_left_select>div{
+    font-size: 20px;
+}
+.patient_record_serch>button{
+    width:125px;
+    height:50px;
+    background:rgba(166,206,57,1);
+    box-shadow:0px 3px 9px 0px rgba(132,155,71,0.27);
+    border-radius:25px;
+    margin-left: 45px;
+    outline: none;
+}
+.record_table_head{
+    background-color: rgba(17,151,214,0.2);
+    height: 60px;
+    font-size: 18px;
+    margin-top: 30px;
+}
+.record_table_index{
+    line-height: 60px;
+    text-align: center;
+}
+.record_table_index>ul>li:first-child{
+    width: 85px;
+    border-left: 1px solid #F2F0F0;
+    border-right: 1px solid #F2F0F0;
+    border-bottom: 1px solid #F2F0F0;
+}
+.record_table_index>ul>li:nth-child(2){
+    width: 280px;
+    border-right: 1px solid #F2F0F0;
+    border-bottom: 1px solid #F2F0F0;
+}
+.record_table_index>ul>li:nth-child(3){
+    width: 220px;
+    border-right: 1px solid #F2F0F0;
+    border-bottom: 1px solid #F2F0F0;
+}
+.record_table_index>ul>li:nth-child(4){
+    width: 255px;
+    border-right: 1px solid #F2F0F0;
+    border-bottom: 1px solid #F2F0F0;
+}
+.record_table_index>ul>li:nth-child(5){
+    width: 180px;
+    border-right: 1px solid #F2F0F0;
+    border-bottom: 1px solid #F2F0F0;
+}
+.record_table_index>ul>li:nth-child(6){
+    width: 250px;
+    border-right: 1px solid #F2F0F0;
+    border-bottom: 1px solid #F2F0F0;
+}
+.record_table_index>ul>li:last-child{
+    width: 300px;
+    border-right: 1px solid #F2F0F0;
+    border-bottom: 1px solid #F2F0F0;
+}
