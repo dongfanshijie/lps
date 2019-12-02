@@ -40,19 +40,7 @@ public class ChiefComplaintServiceImpl implements ChiefComplaintService {
         //Patient patientatient = (Patient) patientMapoper.queryPatientById(patientID);
 
         //测试新增
-        chiefComplaint.setSymptom("主要症状暂无");
-        chiefComplaint.setFrequency("每天");
-        chiefComplaint.setFirsttime("2018-11-12");
-        chiefComplaint.setLasttime("2018-11-25");
-        chiefComplaint.setDegree("中度");
-        chiefComplaint.setConcomitantsymptom("无症状");
-        chiefComplaint.setMotorsymptoms("无运动症状");
-        chiefComplaint.setSleepsymptoms("很好");
-        chiefComplaint.setVisitingexperience("无就诊经历");
-        chiefComplaint.setPastmedicalhistory("无病史");
-        chiefComplaint.setFamilyhistory("无家族史");
-        chiefComplaint.setStressor("无应激源");
-        //chiefComplaint.setPatientid("P20191122155211923");
+
 
         //添加患者编号
         chiefComplaint.setPatientid(patientID);
@@ -79,13 +67,6 @@ public class ChiefComplaintServiceImpl implements ChiefComplaintService {
     public void addExperience(PatientExperience patientExperience, String patientID) {
 
         //添加测试数据
-        patientExperience.setSeekdata("2017-11-12");
-        patientExperience.setSymptom("头疼");
-        patientExperience.setHospital("航空医院");
-        patientExperience.setInspect("ct");
-        patientExperience.setDiagnosis("偏头痛");
-        patientExperience.setPlan("早睡吃药");
-        patientExperience.setResult("无结果");
 
         //添加系统时间
         SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

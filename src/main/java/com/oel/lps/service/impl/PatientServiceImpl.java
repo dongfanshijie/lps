@@ -71,35 +71,7 @@ public class PatientServiceImpl implements PatientService {
         patient.setPatientId(equipmentNo);
 
         //测试添加数据
-        patient.setPatientName("患者李");
-        patient.setPatientSex("男");
-        patient.setIdCardNo("11022819545445646556");
-        patient.setPatientDate("1992-10-11");
-        patient.setPatientAge(34);
-        patient.setNation("汉族");
-        patient.setFaith("基督");
-        patient.setEducation("大专");
-        patient.setPhoneNumber("138465484848");
-        patient.setHeight(158);
-        patient.setWeight("58");
-        patient.setHandHabit("右手");
-        patient.setMaritaStatus("已婚");
-        patient.setFamilyRanking(4);
-        patient.setChildrenNumber(2);
-        patient.setChildrenSituation("在身边");
-        patient.setParentSituation("身体好");
-        patient.setEducationMode("父亲");
-        patient.setShortNamw("天通苑");
-        patient.setShortCode(000);
-        patient.setDetailedAddress("天通苑西区454号");
-        patient.setSource("门诊");
-        patient.setSourceDepartment("疼痛科");
-        patient.setSourceDoctor("好大夫");
-        patient.setEstingItems(1);
-        //patient.setSpecialty(1);
-        //patient.setWhole(1);
-        patient.setTreatmentProject(1);
-        patient.setProcess("测试45545");
+
 
         //添加系统时间
         SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -123,22 +95,6 @@ public class PatientServiceImpl implements PatientService {
         }
 
 
-//        //根据患者等级治疗类型创建治疗表 1=添加 0=为添加
-//        //获取用户编号
-//        String patientId = patient.getPatientId();
-//        if (patient.getEstingItems()!=null&&patient.getEstingItems()==1){
-//
-//            patientMapoper.addLScreeningChiefcomplaint(patientId);
-//
-//        } if (patient.getSpecialty()!=null&& patient.getSpecialty()==1 ){
-//
-//               System.out.println("专科");
-//
-//        } if (patient.getWhole()!=null&&patient.getWhole()==1){
-//
-//            System.out.println("整体");
-//
-//        }
         return 0;
     }
 
