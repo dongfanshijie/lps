@@ -3,6 +3,7 @@ package com.oel.lps.mapper;
 
 import com.oel.lps.bean.ChiefComplaint;
 import com.oel.lps.bean.Patient;
+import com.oel.lps.bean.PatientExperience;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -22,7 +23,6 @@ public interface PatientMapoper {
 
     List queryIdCardNo(String idCardNo);
 
-    List<Patient> queryPatientById(String id);
 
-    void addChiefComplaint(ChiefComplaint chiefComplaint);
+    List<Patient> queryPatientById(String id);
 }

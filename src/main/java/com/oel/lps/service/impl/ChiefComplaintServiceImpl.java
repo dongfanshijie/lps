@@ -2,6 +2,7 @@ package com.oel.lps.service.impl;
 
 import com.oel.lps.bean.ChiefComplaint;
 import com.oel.lps.bean.Patient;
+import com.oel.lps.bean.PatientExperience;
 import com.oel.lps.mapper.ChiefComplaintMapper;
 import com.oel.lps.mapper.PatientMapoper;
 import com.oel.lps.service.ChiefComplaintService;
@@ -24,8 +25,7 @@ public class ChiefComplaintServiceImpl implements ChiefComplaintService {
     @Autowired
     private ChiefComplaintMapper chiefComplaintMapper;
 
-    @Autowired
-    private PatientMapoper patientMapoper;
+
     /**
      * @Author ws
      * @Description //TODO
@@ -37,7 +37,7 @@ public class ChiefComplaintServiceImpl implements ChiefComplaintService {
     @Override
     public void addChiefComplaint(ChiefComplaint chiefComplaint, String patientID) {
         //根据患者id获取患者编号
-        Patient patientatient = (Patient) patientMapoper.queryPatientById(patientID);
+        //Patient patientatient = (Patient) patientMapoper.queryPatientById(patientID);
 
         //测试新增
         chiefComplaint.setSymptom("主要症状暂无");
@@ -52,16 +52,50 @@ public class ChiefComplaintServiceImpl implements ChiefComplaintService {
         chiefComplaint.setPastmedicalhistory("无病史");
         chiefComplaint.setFamilyhistory("无家族史");
         chiefComplaint.setStressor("无应激源");
+        //chiefComplaint.setPatientid("P20191122155211923");
 
         //添加患者编号
-        chiefComplaint.setPatientid(patientatient.getPatientId());
+        chiefComplaint.setPatientid(patientID);
         //添加系统时间
         SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();
         String time = format0.format(date.getTime());
-        chiefComplaint.setFirsttime(time);
+        chiefComplaint.setCreationTime(time);
 
-        patientMapoper.addChiefComplaint(chiefComplaint);
+        chiefComplaintMapper.addChiefComplaint(chiefComplaint);
+
+
+    }
+
+    /*
+     * @Author ws
+     * @Description //TODO
+     * @Date  2019/11/29
+     * @Param [patientExperience, patientID]
+     * @return int
+     * 添加就诊经历
+     **/
+    @Override
+    public void addExperience(PatientExperience patientExperience, String patientID) {
+
+        //添加测试数据
+        patientExperience.setSeekdata("2017-11-12");
+        patientExperience.setSymptom("头疼");
+        patientExperience.setHospital("航空医院");
+        patientExperience.setInspect("ct");
+        patientExperience.setDiagnosis("偏头痛");
+        patientExperience.setPlan("早睡吃药");
+        patientExperience.setResult("无结果");
+
+        //添加系统时间
+        SimpleDateFormat format0 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        String time = format0.format(date.getTime());
+        patientExperience.setCreationtime(time);
+
+        //添加患者编号
+        patientExperience.setPatientid(patientID);
+        chiefComplaintMapper.addExperience(patientExperience);
 
 
     }

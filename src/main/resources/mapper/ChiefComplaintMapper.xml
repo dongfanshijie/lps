@@ -3,8 +3,18 @@
 <mapper namespace="com.oel.lps.mapper.ChiefComplaintMapper">
 
 
+    <!--新增  添加就诊经历-->
+    <insert id="addExperience" parameterType="com.oel.lps.bean.PatientExperience">
+        INSERT INTO  l_patient_experience(seekdata,symptom,hospital,inspect,diagnosis,plan,result,creationtime,patientid) VALUES
+        (#{seekdata},#{symptom},#{hospital},#{inspect},#{diagnosis},#{plan},#{result},#{creationtime},#{patientid})
+    </insert>
 
-
-
+    <!--新增 主诉-->
+    <insert id="addChiefComplaint" parameterType="com.oel.lps.bean.ChiefComplaint">
+        INSERT INTO  l_screening_chiefcomplaint(symptom,frequency,firsttime,lasttime,degree,concomitantsymptom,motorsymptoms,
+        sleepsymptoms,visitingexperience,pastmedicalhistory,familyhistory,stressor,patientid,creationTime) VALUES
+        (#{symptom},#{frequency},#{firsttime},#{lasttime},#{degree},#{concomitantsymptom},#{motorsymptoms},#{sleepsymptoms},
+        #{visitingexperience},#{pastmedicalhistory},#{familyhistory},#{stressor},#{patientid},#{creationTime})
+    </insert>
 
 </mapper>
