@@ -11,6 +11,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../css/patient_list.css">
     <link rel="stylesheet" href="../../css/patient_record.css">
+    <link rel="stylesheet" href="../../css/patient_complaint.css">
 </head>
 <body>
 <div class="patient">
@@ -196,8 +197,200 @@
                     </div>
                 </div>
             </div>
-            <div>
-                
+            <div class="patient_complaint">
+                <div class="patient_complaint_index">
+                    <div class="patient_complaint_head">
+                        <div class="patient_complaint_num">
+                            <pre>编  号：P100011811010100002</pre>
+                        </div>
+                        <div class="patient_complaint_info">
+                            <pre>姓  名：王五</pre>
+                            <pre>年  龄：21岁</pre>
+                            <pre>性  别：男</pre>
+                        </div>
+                        <div class="patient_complaint_doctor">
+                            <pre>体  重：75kg</pre>
+                            <pre>来源医生：孙江月</pre>
+                            <pre>来源科室：心内科</pre>
+                        </div>
+                    </div>
+                    <div class="patient_complaint_body">
+                        <div class="complaint_body_content">
+                            <div class="comlaint_body_item">
+                                <div class="comlaint_body_point">
+                                    <div class="comlaint_point_content">
+                                        <div class="comlaint_point_big">
+                                            <div class="comlaint_point_small">1</div>
+                                        </div>
+                                        <div>主诉</div>
+                                    </div>
+                                    <div class="comlaint_body_line"></div>
+                                    <div class="comlaint_point_content">
+                                        <div class="comlaint_point_big">
+                                            <div class="comlaint_point_small">2</div>
+                                        </div>
+                                        <div>HRV</div>
+                                    </div>
+                                    <div class="comlaint_body_line"></div>
+                                    <div class="comlaint_point_content">
+                                        <div class="comlaint_point_big">
+                                            <div class="comlaint_point_small">3</div>
+                                        </div>
+                                        <div>问卷</div>
+                                    </div>
+                                    <div class="comlaint_body_line"></div>
+                                    <div class="comlaint_point_content">
+                                        <div class="comlaint_point_big">
+                                            <div class="comlaint_point_small">4</div>
+                                        </div>
+                                        <div>量表</div>
+                                    </div>
+                                    <div class="comlaint_body_line"></div>
+                                    <div class="comlaint_point_content">
+                                        <div class="comlaint_point_big">
+                                            <div class="comlaint_point_small">5</div>
+                                        </div>
+                                        <div>结果</div>
+                                    </div>
+                                </div>
+                                <div class="patient_complaint_input">
+                                    <div class="complaint_input_zhuyao">
+                                        <div class="complaint_zhuyao_input">
+                                            <span>
+                                                主要症状
+                                            </span>
+                                            <span class="content_red">*</span>
+                                            <span>:</span>
+                                        </div>
+                                        <div class="complaint_zhuyao_area">
+                                            <textarea name="" id="" cols="200" rows="7" placeholder="最多可输入500字，超出后输入不显示（必填项）"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="complaint_input_fazuopinlv">
+                                        <div class="complaint_input_fazuo">
+                                            <div class="complaint_fazuo_input">
+                                                <span>发作频率</span>
+                                                <span class="content_red">*</span>
+                                                <span>:</span>
+                                            </div>
+                                            <div class="complaint_fazuo_area">
+                                                <input type="text" placeholder="请输入发作频率">
+                                            </div>
+                                        </div>
+                                        <div class="complaint_input_shouci">
+                                            <div class="complaint_shouci_input">
+                                                <span>首次发作</span>
+                                                <span class="content_red">*</span>
+                                                <span>:</span>
+                                            </div>
+                                            <div class="complaint_shouci_area">
+                                                <input type="text" placeholder="请选择年月日时分">
+                                            </div>
+                                        </div>
+                                        <div class="complaint_input_moci">
+                                            <div class="complaint_moci_input">
+                                                <span>末次发作</span>
+                                                <span class="content_red">*</span>
+                                                <span>:</span>
+                                            </div>
+                                            <div class="complaint_moci_area">
+                                                <input type="text" placeholder="请选择年月日时分">
+                                            </div>
+                                        </div>
+                                        <div class="complaint_input_yanzhong">
+                                            <div class="complaint_yanzhong_input">
+                                                <span>严重程度</span>
+                                                <span class="content_red">*</span>
+                                                <span>:</span>
+                                            </div>
+                                            <div class="complaint_yanzhong_area">
+                                                <input type="text" placeholder="请选择">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="complaint_input_bansui">
+                                        <div class="complaint_bansui_input">
+                                            <span>伴随症状 ：</span>
+                                        </div>
+                                        <div class="complaint_bansui_area">
+                                            <input type="text" placeholder="最多可输入30字，超出后输入不显示（选填项）">
+                                        </div>
+                                    </div>
+                                    <div class="complaint_input_yundong">
+                                        <div class="complaint_yundong_input">
+                                            <span>运动症状：</span>
+                                        </div>
+                                        <div class="complaint_yundong_area">
+                                            <input type="text" placeholder="最多可输入30字，超出后输入不显示（选填项）">
+                                        </div>
+                                    </div>
+                                    <div class="complaint_input_shuimian">
+                                        <div class="complaint_shuimian_input">
+                                            <span>睡眠症状：</span>
+                                        </div>
+                                        <div class="complaint_shuimian_area">
+                                            <input type="text" placeholder="最多可输入30字，超出后输入不显示（选填项）">
+                                        </div>
+                                    </div>
+                                    <div class="complaint_input_jiuzhen">
+                                        <div class="complaint_jiuzhen_button">
+                                            <div class="complaint_jiuzhen_input">
+                                                <span>就诊经历：</span>
+                                            </div>
+                                            <div class="complaint_jiuzhen_area">
+                                                <button>点击添加</button>
+                                            </div>
+                                        </div>
+                                        <div class="complaint_jiuzhen_radio">
+                                            <img src="/images/patient_yuan.png" alt="">
+                                            <div>
+                                                暂无就诊经历
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="complaint_input_bingshi">
+                                        <div class="complaint_input_jiwang">
+                                            <div class="complaint_jiwang_input">
+                                                <span>既往病史</span>
+                                                <span>*</span>
+                                                <span>:</span>
+                                            </div>
+                                            <div class="complaint_jiwang_area">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                        <div class="complaint_input_jiazu">
+                                            <div class="complaint_jiazu_input">
+                                                <span>家族病史</span>
+                                                <span>*</span>
+                                                <span>:</span>
+                                            </div>
+                                            <div class="complaint_jiazu_area">
+                                                <input type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="complaint_input_yingji">
+                                        <div class="complaint_yingji_input">
+                                            <span>应激源：</span>
+                                        </div>
+                                        <div>
+                                            <button>点击添加</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <button>保存</button>
+                                        </div>
+                                        <div>
+                                            <button>完成</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -206,4 +399,5 @@
 <script src="../../js/jquery-3.4.1.min.js"></script>
 <script src="../../js/patient_list.js"></script>
 <script src="../../js/patient_record.js"></script>
+<script src="../../js/patient_complaint.js"></script>
 </html>

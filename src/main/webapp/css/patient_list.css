@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
 }
-.patient_right_tiao1{
-    display: none;
-}
 .patient{
     width: 1900px;
 }
+.patient_right_tiao1{
+    display: none;
+}
 .patient_list{
     width: 270px;
-    height: 930px;
+    height: 1605px;
     background-color: #3C3B40FF;
     display: inline-block;
 }
@@ -42,7 +42,7 @@
     margin-left: 6px;
 }
 .patient_xi{
-    margin-top: 180px;
+    margin-top: 890px;
     background: #242119FF;
     color: #FFF;
 }

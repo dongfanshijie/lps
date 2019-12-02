@@ -94,7 +94,10 @@ $(".patient_chaxun").click(
         })
     }
 )
-
+$(document).on("click",".patient_dispatch>span:first-child",function(){
+    console.log($(this).parent().parent().prev().prev().prev().prev().prev().prev().html())
+    console.log(1)
+})
 
 $(".patient_renwu span").click(
     function(){
